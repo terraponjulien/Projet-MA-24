@@ -17,18 +17,20 @@ namespace MA_24_projet_JulienTerrapon
             InitializeComponent();
         }
 
-        private DateTime debut = DateTime.Now;
+        private DateTime start = DateTime.Now;
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cmdStart_Click(object sender, EventArgs e)
         {
-            timer1.Enabled = true;
+            //Lancement du chrono lors du click sur le bouton Start
+            timerChrono.Enabled = true;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timerChrono_Tick(object sender, EventArgs e)
         {
-            DateTime maintenant = DateTime.Now;
-            TimeSpan durée = maintenant - debut;
-            label1.Text = durée+"secondes";
+            //Va faire faire cette opération et actualiser le chrono toutes les 1ms
+            DateTime now = DateTime.Now;
+            TimeSpan time = now - start;
+            lblChrono.Text = time+"";
         }
     }
 }

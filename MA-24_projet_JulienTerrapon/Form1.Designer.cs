@@ -29,34 +29,45 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.cmdStart = new System.Windows.Forms.Button();
+            this.timerChrono = new System.Windows.Forms.Timer(this.components);
+            this.lblChrono = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // cmdStart
             // 
-            this.button1.Location = new System.Drawing.Point(464, 109);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.cmdStart.Location = new System.Drawing.Point(24, 61);
+            this.cmdStart.Name = "cmdStart";
+            this.cmdStart.Size = new System.Drawing.Size(75, 23);
+            this.cmdStart.TabIndex = 0;
+            this.cmdStart.Text = "Start";
+            this.cmdStart.UseVisualStyleBackColor = true;
+            this.cmdStart.Click += new System.EventHandler(this.cmdStart_Click);
             // 
-            // timer1
+            // timerChrono
             // 
-            this.timer1.Interval = 2000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timerChrono.Interval = 1;
+            this.timerChrono.Tick += new System.EventHandler(this.timerChrono_Tick);
+            // 
+            // lblChrono
+            // 
+            this.lblChrono.AutoSize = true;
+            this.lblChrono.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChrono.Location = new System.Drawing.Point(216, 61);
+            this.lblChrono.Name = "lblChrono";
+            this.lblChrono.Size = new System.Drawing.Size(0, 25);
+            this.lblChrono.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(105, 85);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(122, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Chrono:";
             // 
             // Form1
             // 
@@ -64,7 +75,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblChrono);
+            this.Controls.Add(this.cmdStart);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -74,8 +86,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button cmdStart;
+        private System.Windows.Forms.Timer timerChrono;
+        private System.Windows.Forms.Label lblChrono;
         private System.Windows.Forms.Label label1;
     }
 }
